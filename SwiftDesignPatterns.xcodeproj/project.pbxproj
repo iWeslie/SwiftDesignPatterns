@@ -13,6 +13,11 @@
 		D357929921CA59DE00F6367B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D357929821CA59DE00F6367B /* Assets.xcassets */; };
 		D357929C21CA59DE00F6367B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D357929A21CA59DE00F6367B /* LaunchScreen.storyboard */; };
 		D35792A721CA59DE00F6367B /* SwiftDesignPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35792A621CA59DE00F6367B /* SwiftDesignPatternsTests.swift */; };
+		D35792B221CA5BFF00F6367B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35792B121CA5BFF00F6367B /* GameView.swift */; };
+		D35792B421CA5CC000F6367B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35792B321CA5CC000F6367B /* GameViewController.swift */; };
+		D35792B821CA5D1400F6367B /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35792B721CA5D1400F6367B /* Shape.swift */; };
+		D35792BA21CA5D4600F6367B /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35792B921CA5D4600F6367B /* ShapeView.swift */; };
+		D35792BC21CA5D5F00F6367B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35792BB21CA5D5F00F6367B /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		D35792A221CA59DE00F6367B /* SwiftDesignPatternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDesignPatternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35792A621CA59DE00F6367B /* SwiftDesignPatternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDesignPatternsTests.swift; sourceTree = "<group>"; };
 		D35792A821CA59DE00F6367B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D35792B121CA5BFF00F6367B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		D35792B321CA5CC000F6367B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D35792B721CA5D1400F6367B /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		D35792B921CA5D4600F6367B /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
+		D35792BB21CA5D5F00F6367B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +89,12 @@
 			children = (
 				D357929121CA59DC00F6367B /* AppDelegate.swift */,
 				D357929321CA59DC00F6367B /* ViewController.swift */,
-				D357929521CA59DC00F6367B /* Main.storyboard */,
-				D357929821CA59DE00F6367B /* Assets.xcassets */,
-				D357929A21CA59DE00F6367B /* LaunchScreen.storyboard */,
-				D357929D21CA59DE00F6367B /* Info.plist */,
+				D35792B121CA5BFF00F6367B /* GameView.swift */,
+				D35792B321CA5CC000F6367B /* GameViewController.swift */,
+				D35792B721CA5D1400F6367B /* Shape.swift */,
+				D35792B921CA5D4600F6367B /* ShapeView.swift */,
+				D35792BB21CA5D5F00F6367B /* Utils.swift */,
+				D35792BD21CA5DEE00F6367B /* Others */,
 			);
 			path = SwiftDesignPatterns;
 			sourceTree = "<group>";
@@ -94,6 +106,17 @@
 				D35792A821CA59DE00F6367B /* Info.plist */,
 			);
 			path = SwiftDesignPatternsTests;
+			sourceTree = "<group>";
+		};
+		D35792BD21CA5DEE00F6367B /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D357929521CA59DC00F6367B /* Main.storyboard */,
+				D357929821CA59DE00F6367B /* Assets.xcassets */,
+				D357929A21CA59DE00F6367B /* LaunchScreen.storyboard */,
+				D357929D21CA59DE00F6367B /* Info.plist */,
+			);
+			name = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +220,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35792BA21CA5D4600F6367B /* ShapeView.swift in Sources */,
+				D35792B821CA5D1400F6367B /* Shape.swift in Sources */,
+				D35792B421CA5CC000F6367B /* GameViewController.swift in Sources */,
+				D35792BC21CA5D5F00F6367B /* Utils.swift in Sources */,
 				D357929421CA59DC00F6367B /* ViewController.swift in Sources */,
+				D35792B221CA5BFF00F6367B /* GameView.swift in Sources */,
 				D357929221CA59DC00F6367B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.weslie.SwiftDesignPatterns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -388,7 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.weslie.SwiftDesignPatterns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
