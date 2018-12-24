@@ -9,9 +9,9 @@
 import UIKit
 
 class ShapeView: UIView {
-
 	var shape: Shape!
 	
+    // 1
 	var showFill: Bool = true {
 		didSet {
 			setNeedsDisplay()
@@ -23,6 +23,7 @@ class ShapeView: UIView {
 		}
 	}
 	
+    // 2
 	var showOutline: Bool = true {
 		didSet {
 			setNeedsDisplay()
@@ -34,11 +35,13 @@ class ShapeView: UIView {
 		}
 	}
 	
+    // 3
 	var tapHandler: ((ShapeView) -> ())?
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		
+        // 4
 		let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
 		addGestureRecognizer(tapRecognizer)
 	}
@@ -48,6 +51,7 @@ class ShapeView: UIView {
 	}
 	
 	@objc func handleTap() {
+        // 5
 		tapHandler?(self)
 	}
 	
@@ -58,18 +62,21 @@ class SquareShapeView: ShapeView {
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
 		
+        // 1
 		if showFill {
 			fillColor.setFill()
 			let fillPath = UIBezierPath(rect: bounds)
 			fillPath.fill()
 		}
 		
+        // 2
 		if showOutline {
 			outlineColor.setStroke()
+            
+            // 3
 			let outlinePath = UIBezierPath(rect: CGRect(x: halfLineWidth, y: halfLineWidth, width: bounds.size.width - 2 * halfLineWidth, height: bounds.size.height - 2 * halfLineWidth))
 			outlinePath.lineWidth = 2.0 * halfLineWidth
 			outlinePath.stroke()
 		}
 	}
-
 }
